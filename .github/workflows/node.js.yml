@@ -14,7 +14,10 @@ jobs:
           npm install
           npm run build
 
-  test:
+      - uses: actions/upload-artifact@master
+        with:
+          name: webpack artifacts
+          path: public/
 
     runs-on: ubuntu-latest
 
